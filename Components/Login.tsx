@@ -20,8 +20,10 @@ export default function Login() {
 
   const handleLogin = async () => {
     try {
-      await signInWithEmailAndPassword(auth, email, password);
-      Alert.alert('Login Successful', 'Welcome back!');
+     await signInWithEmailAndPassword(auth, email, password);
+       navigation.navigate('MenuScreen');
+        Alert.alert('Login Successful', 'Welcome back!');
+
     } catch (error: any) {
       console.error(error);
       Alert.alert('Login Failed', error.message);

@@ -50,9 +50,9 @@ export default function CreateAccount() {
         fullName: trimmedName,
         email: trimmedEmail,
       });
-      Alert.alert('Registration Successful',`${trimmedName} You have successfully registered your account`,[
-        { text: 'OK', onPress: () => navigation.navigate('Login') }
-      ]);
+       navigation.navigate('Login');
+      Alert.alert('Registration Successful', `${trimmedName}, you have successfully registered your account.`);
+
       console.log('User Registered Successfully');
     } catch (e: any) {
       console.error(e);
