@@ -18,6 +18,7 @@ export default {
       supportsTablet: true
     },
     android: {
+       package: "com.obaturn.phonetracker",
       adaptiveIcon: {
         foregroundImage: "./assets/adaptive-icon.png",
         backgroundColor: "#ffffff"
@@ -28,7 +29,7 @@ export default {
       favicon: "./assets/favicon.png"
     },
 
-    // 👇 Add your Firebase config here using environment variables
+    // ✅ Updated extra with eas.projectId
     extra: {
       firebaseApiKey: process.env.FIREBASE_API_KEY,
       firebaseAuthDomain: process.env.FIREBASE_AUTH_DOMAIN,
@@ -37,6 +38,11 @@ export default {
       firebaseMessagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
       firebaseAppId: process.env.FIREBASE_APP_ID,
       firebaseMeasurementId: process.env.FIREBASE_MEASUREMENT_ID,
+
+      // 👇 Add this line
+      eas: {
+        projectId: "bc6022f4-0115-4bee-b293-354f385d1629"
+      }
     },
   },
 };
